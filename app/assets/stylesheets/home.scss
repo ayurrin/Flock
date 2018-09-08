@@ -1,0 +1,237 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+
+
+
+body {
+  font-family: "Avenir Next";
+  margin: 0;
+  min-height: 1vh;
+}
+
+.main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+
+
+//header
+header {
+ height: 80px;
+ position: absolute;
+ z-index: 1;
+ width: 100%;
+ background-color: #FE9A2E;
+ color: white;
+ line-height:70px;
+ padding:0px;
+
+}
+
+.header-logo {
+ float: left;
+
+ padding:10px 40px;
+ font-size: 34px;
+
+ font-weight: bold;
+}
+
+.header-logo a{
+ color:white;
+ font-size: 34px;
+ text-decoration: none;
+}
+
+.header-menus {
+ float: right;
+ padding-right: 20px;
+}
+
+.header-menus li {
+ float: left;
+ line-height: 65px;
+ font-size: 13px;
+ padding-left: 15px;
+ list-style: none;
+}
+
+.header-menus a {
+ float: left;
+ font-size: 18px;
+
+ font-weight : 60px;
+ color:white;
+ text-decoration: none;
+}
+
+//footer
+.footer{
+  background-color: #2f5167;
+  height:250px;
+  color:white;
+  text-align: center;
+}
+.footer-logo{
+  text-align:center;
+  font-size:30px;
+  padding-top: 40px;
+}
+.footer-menu {
+  height:200px;
+  width:550px;
+  float:right;
+  padding-top:50px;
+  box-sizing: inherit;
+  margin-right: 0;
+  text-align: center;
+
+}
+.footer-menu li{
+  position:relative;
+  list-style: none;
+  float:left;
+  padding-left:10px;
+  padding-right:10px;
+  display: inline;
+  margin: 0 10px 0 0;
+
+}
+
+
+
+
+
+//tutorial
+.tutorial {
+  padding: 180px 8% 0;
+
+}
+
+.tutorial h1 {
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tutorial h2{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.tutorial p {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.catch{
+  height:500px;
+  text-align: center;
+
+}
+.about{
+  height:300px;
+}
+
+.make{
+
+  margin: 100px,auto;
+  text-align: center;
+
+}
+.make-item{
+  float:left;
+  margin-right:25px;
+  margin-left: 25px;
+}
+.make-item p{
+  font-size:18px;
+  margin-top: 30px;
+}
+
+.make-items{
+  height:350px;
+  width:1000px;
+  margin:auto;
+}
+.example{
+
+
+  margin: 100px,auto;
+  text-align: center;
+
+}
+.example-item{
+  float:left;
+  margin-right:25px;
+  margin-left: 25px;
+}
+.example-item p{
+  font-size:18px;
+  margin-top: 30px;
+}
+.example-items{
+  height:350px;
+  width:860px;
+  margin:auto;
+}
+
+
+
+//今だけ
+.square {
+   width: 200px;
+   height: 200px;
+   background: gray;
+}
+
+.square2{
+  width: 380px;
+  height: 200px;
+  background: gray;
+}

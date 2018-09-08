@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flock</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <% if @current_user %>
+          <%= link_to("Flock", "/user/:id") %>
+        <% else %>
+          <%= link_to("Flock", "/tutorial") %>
+        <% end %>
+      </div>
+      <ul class="header-menus">
+        <% if @current_user %>
+          <li>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </li>
+          <li>
+            <%= link_to("マイページ", "/user/:id") %>
+          </li>
+          <li>
+            <%= link_to("投稿一覧", "/") %>
+          </li>
+          <li>
+            <%= link_to("募集作成", "/create") %>
+          </li>
+          <li>
+            <%= link_to("ログアウト", "/logout", {method: :post}) %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("Flockとは", "/tutorial") %>
+          </li>
+          <li>
+            <%= link_to("投稿一覧", "/") %>
+          </li>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
+        <% end %>
+      </ul>
+    </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+    <div class="footer">
+
+      <div class="footer-logo">
+        Flock
+      </div>
+      <div class="footer-menu">
+        <ul>
+          <li>お知らせ</li>
+          <li>利用規約</li>
+          <li>プライバシーポリシー</li>
+          <li>お問い合わせ</li>
+        </ul>
+        
+
+      </div>
+
+
+
+    </div>
+  </body>
+</html>

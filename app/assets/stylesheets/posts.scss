@@ -1,0 +1,59 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content textarea {
+  font-size: 20px;
+  padding: 10px;
+  min-height: 180px;
+  border: 2px solid rgb(216, 218, 223);
+  resize: none;
+  width:100%;
+  margin-top:5px;
+
+}
+.content{
+  margin-top:15px;
+}
+.title{
+  margin-top:15px;
+}
+.title textarea{
+  font-size: 24px;
+  padding: 10px;
+  border: 2px solid rgb(216, 218, 223);
+  resize: none;
+  width:60%;
+  margin-top:5px;
+
+}
+.create input{
+  width:100px;
+  margin-top:10px;
+  font-size:18px;
+  background-color: gray;
+  color:white;
+
+}
+.check{
+  text-align: center;
+}
+
+
+
+.create textarea::-webkit-input-placeholder {
+  font-size: 20px;
+  opacity: 0.5;
+}
+.create h1{
+  text-align: center;
+}
+
+.create{
+    height:800px;
+    padding: 100px 8% 0;
+
+}
+.create p{
+  font-size: 20px;
+}
