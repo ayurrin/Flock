@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+AdminUser.create!(email: 'sports128dream@gmail.com', password: 'flock8228', password_confirmation: 'flock8228') if Rails.env.development?
