@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -15,7 +16,7 @@
         <% if @current_user %>
           <%= link_to("Flock", "/user/:id") %>
         <% else %>
-          <%= link_to("Flock", "/tutorial") %>
+          <%= link_to("Flock", "/") %>
         <% end %>
       </div>
       <ul class="header-menus">
@@ -27,7 +28,7 @@
             <%= link_to("マイページ", "/user/:id") %>
           </li>
           <li>
-            <%= link_to("投稿一覧", "/") %>
+            <%= link_to("投稿一覧", "/posts") %>
           </li>
           <li>
             <%= link_to("募集作成", "/create") %>
@@ -37,13 +38,13 @@
           </li>
         <% else %>
           <li>
-            <%= link_to("Flockとは", "/tutorial") %>
+            <%= link_to("Flockとは", "/") %>
           </li>
           <li>
-            <%= link_to("投稿一覧", "/") %>
+            <%= link_to("投稿一覧", "/posts") %>
           </li>
           <li>
-            <%= link_to("ログイン", "/login") %>
+            <%= link_to("Twitterでログイン", "/auth/twitter") %>
           </li>
         <% end %>
       </ul>
@@ -57,24 +58,7 @@
 
     <%= yield %>
 
-    <div class="footer">
 
-      <div class="footer-logo">
-        Flock
-      </div>
-      <div class="footer-menu">
-        <ul>
-          <li>お知らせ</li>
-          <li>利用規約</li>
-          <li>プライバシーポリシー</li>
-          <li>お問い合わせ</li>
-        </ul>
-        
-
-      </div>
-
-
-
-    </div>
   </body>
+
 </html>

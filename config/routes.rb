@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'tutorial' => "home#tutorial"
+  get '/auth/:provider/callback' => 'sessions#create'
+  get '/' => "home#tutorial"
 
 
   get 'login' => "users#login_form"
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
 
 
-  get '/' => "posts#index"
+  get '/posts' => "posts#index", as: 'root'
   get 'create' => "posts#create"
   post "posts/create" => "posts#create2"
   get 'preview/:id' => "posts#preview"

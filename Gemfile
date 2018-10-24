@@ -67,3 +67,5 @@ gem 'devise'
 gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
+gem 'omniauth'
+gem 'omniauth-twitter'

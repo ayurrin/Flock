@@ -65,6 +65,7 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    bcrypt (3.1.12)
     bcrypt (3.1.12-x64-mingw32)
     bindex (0.5.0)
     bootsnap (1.3.1)
@@ -108,6 +109,7 @@ GEM
     duktape (2.0.1.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    ffi (1.9.25)
     ffi (1.9.25-x64-mingw32)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -117,6 +119,7 @@ GEM
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    hashie (3.5.7)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     inherited_resources (1.9.0)
@@ -156,12 +159,26 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
+    msgpack (1.2.4)
     msgpack (1.2.4-x64-mingw32)
     multi_json (1.13.1)
     nio4r (2.3.1)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
     nokogiri (1.8.4-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    oauth (0.5.4)
+    omniauth (1.8.1)
+      hashie (>= 3.4.6, < 3.6.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
+    pg (1.1.3)
     pg (1.1.3-x64-mingw32)
     public_suffix (3.0.3)
     puma (3.12.0)
@@ -230,6 +247,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.3.13)
     sqlite3 (1.3.13-x64-mingw32)
     thor (0.20.0)
     thread_safe (0.3.6)
@@ -257,6 +275,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
@@ -271,6 +290,8 @@ DEPENDENCIES
   draper
   duktape
   jbuilder (~> 2.5)
+  omniauth
+  omniauth-twitter
   pg
   puma (~> 3.11)
   pundit
@@ -287,4 +308,4 @@ RUBY VERSION
    ruby 2.4.4p296
 
 BUNDLED WITH
-   1.16.4
+   1.16.6
