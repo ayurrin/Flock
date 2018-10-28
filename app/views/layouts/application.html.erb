@@ -13,6 +13,7 @@
   <body>
     <header>
       <div class="header-logo">
+
         <% if @current_user %>
           <%= link_to("Flock", "/user/:id") %>
         <% else %>
@@ -21,11 +22,18 @@
       </div>
       <ul class="header-menus">
         <% if @current_user %>
+        <div class="username">
+
+
           <li>
-            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            <img src="<%= "#{@current_user.image_url}" %>">
           </li>
           <li>
-            <%= link_to("マイページ", "/user/:id") %>
+            <%= @current_user.nickname %>
+          </li>
+          </div>
+          <li>
+            <%= link_to("マイページ", "/user/#{@current_user.id}") %>
           </li>
           <li>
             <%= link_to("投稿一覧", "/posts") %>
@@ -57,6 +65,25 @@
     <% end %>
 
     <%= yield %>
+    <div class="footer">
+
+      <div class="footer-logo">
+        Flock
+      </div>
+      <div class="footer-menu">
+        <ul>
+          <li>お知らせ</li>
+          <li>利用規約</li>
+          <li>プライバシーポリシー</li>
+          <li>お問い合わせ</li>
+        </ul>
+
+
+      </div>
+
+
+
+    </div>
 
 
   </body>

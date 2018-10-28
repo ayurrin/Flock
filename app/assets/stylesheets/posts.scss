@@ -32,10 +32,33 @@
   width:100px;
   margin-top:10px;
   font-size:18px;
-  background-color: gray;
+  background-color: red;
   color:white;
-
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+  color: white;
 }
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+  color: white;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+.button_wrapper a{
+  color:white;
+  text-decoration: none;
+}
+
 .check{
   text-align: center;
 }
@@ -145,8 +168,8 @@
   font-size: 14px;
 }
 .main {
-  position: absolute;
-  top: 64px;
+
+  
   width: 100%;
   height: auto;
   min-height: 100%;
@@ -165,4 +188,9 @@
 .posts-new textarea::-webkit-input-placeholder {
   font-size: 24px;
   opacity: 0.5;
+}
+input {
+  color: #8899a6;
+  text-decoration: underline;
+  font-size: 14px;
 }
