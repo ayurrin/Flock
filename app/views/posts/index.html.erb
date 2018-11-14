@@ -1,16 +1,28 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<div class="posts">
-  <!--each文の繰り返し-->
-  <div class="posts-item">
-    <div class="post-left">
-      <!--ユーザーimg-->
-    </div>
-    <div class="post-right">
-      <div class="post-username">
-        <!--ユーザー名へのリンク-->
+
+<div class="create">
+  <div class="container">
+<h2>投稿一覧</h2>
+    <div class="posts-index-item">
+      <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-left">
+          <!-- ユーザーの画像が表示されるように、以下のsrcに値を追加してください -->
+          <img src="<%= "#{post.user.image_url}" %>">
+        </div>
+        <div class="post-right">
+          <div class="post-user-name">
+            <!-- link_toメソッドを用いて、ユーザー詳細ページへのリンクを作成してください -->
+            <%= post.user.nickname %>
+          </div>
+          <%= link_to(post.title, "/#{post.id}") %>
+        </div>
       </div>
-        <!--投稿へのリンク-->
+      <% end %>
     </div>
+
+
+
+
   </div>
+</div>
 </div>

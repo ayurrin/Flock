@@ -26,7 +26,14 @@ a {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
-
+h2{
+  line-height: 150%;
+  font-size:35px;
+}
+p{
+  line-height: 180%;
+  font-size:25px
+}
 input {
   background-color: transparent;
   outline-width: 0;
@@ -42,11 +49,10 @@ body {
 }
 
 .main {
-  position: absolute;
-  top: 64px;
+
   width: 100%;
   height: auto;
-  min-height: 100%;
+
 
 }
 
@@ -57,8 +63,27 @@ body {
   padding-right: 15px;
   clear: both;
 }
+.image{
+  height: 100px;
+  
+}
 
-
+/* フラッシュ ================================ */
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: #f16308;
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+.form-error {
+  color: #ff4d75;
+}
 
 //header
 header {
@@ -70,6 +95,7 @@ header {
  color: white;
  line-height:70px;
  padding:0px;
+
 
 }
 
@@ -91,7 +117,15 @@ header {
 .header-menus {
  float: right;
  padding-right: 20px;
+ float: right;
+
+
 }
+.header-menus li :hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
 
 .header-menus li {
  float: left;
@@ -100,17 +134,35 @@ header {
  padding-left: 15px;
  list-style: none;
 }
+.username  {
+ float: left;
+ line-height: 65px;
+ font-size: 13px;
+ padding-left: 15px;
+ list-style: none;
+ padding-top:20px;
+}
+
 
 .header-menus a {
  float: left;
  font-size: 18px;
 
+
+padding-left:15px;
+padding-right:15px;
  font-weight : 60px;
  color:white;
  text-decoration: none;
+ line-height: 65px;
+margin-top:15px;
+margin-bottom:0px;
+ color: white;
+ display: block;
 }
 
 //footer
+
 .footer{
   background-color: #2f5167;
   height:250px;
@@ -149,12 +201,13 @@ header {
 
 //tutorial
 .tutorial {
-  padding: 180px 8% 0;
+  padding: 150px 8% 0;
+  text-align: center;
 
 }
 
 .tutorial h1 {
-  font-size: 58px;
+  font-size: 50px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -170,12 +223,20 @@ header {
 }
 
 .catch{
-  height:500px;
+  height:auto;
   text-align: center;
+  width:70%;
+  margin:auto;
 
+  padding-top:0px;
+
+}
+.catch h1{
+  padding-bottom:50px;
 }
 .about{
   height:300px;
+  margin: 100px 200px;
 }
 
 .make{
@@ -234,4 +295,60 @@ header {
   width: 380px;
   height: 200px;
   background: gray;
+}
+
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+  color: white;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+.button_wrapper a{
+  color:white;
+  text-decoration: none;
+}
+.messages{
+  text-align: center;
+  padding-top:50px;
+  padding-bottom:100px;
+  background-color: #f6f6f6;
+}
+.messages h2{
+  padding-bottom:50px;
+}
+
+.twitter {
+  background-color: #55acee;
+  padding: 15px 40px;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+  color: white;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+
+}
+.button_wrapper{
+   text-align:center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
 }
