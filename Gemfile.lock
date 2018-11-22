@@ -287,7 +287,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
-  bootsnap
+  bootsnap (>= 1.1.0)
   byebug
   cancan
   capybara (>= 2.15)
