@@ -1,31 +1,34 @@
-<h1>show</h1>
-<div class="show">
-  <div class="show-user">
-  <!--ユーザー情報-->
-  </div>
 
-  <div class="show-content">
+<div class="create">
+
+
+  <div class="content">
     <div class="main posts-show">
       <div class="container">
         <div class="posts-show-item">
           <div class="post-user-name">
-        <!-- ユーザーの画像が表示されるように、以下のsrcの中を埋めてください -->
+
         <img src="<%= "#{@user.image_url}" %>">
 
-        <!-- link_toメソッドを用いて、ユーザー詳細ページへのリンクを作成してください -->
+
         <%= @user.nickname %>
       </div>
+      <div class="post-image">
+        <img alt="content" src="<%= "/#{@post.id}.png" %>" />
 
+      </div>
           <p>
           <!-- @postタイトル -->
+
+
           <%= @post.title  %>
         </p>
         <p>
           <%= @post.content  %>
         </p>
-        <!-- ここに指定されたHTMLを貼り付けてください -->
+
         <div class="post-time">
-          <!-- @postのcreated_atカラムのデータを表示してください -->
+
           <%= @post.created_at %>
         </div>
         <% if @post.user_id==@current_user.id %>
@@ -33,7 +36,7 @@
         <%= link_to("編集", "/edit/#{@post.id}") %>
 
         <%= link_to("削除", "/destroy/#{@post.id}",{method: "post"}) %>
-        
+
 
          <% end %>
       </div>
@@ -45,4 +48,5 @@
   </div>
 
 
+</div>
 </div>

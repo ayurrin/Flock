@@ -38,9 +38,15 @@ input {
   background-color: transparent;
   outline-width: 0;
 }
-
-
-
+.username img {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+  object-fit: cover;
+  margin-top:10px;
+}
 
 body {
   font-family: "Avenir Next";
@@ -57,7 +63,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  width:75%;
   margin: 60px auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -65,7 +71,7 @@ body {
 }
 .image{
   height: 100px;
-  
+
 }
 
 /* フラッシュ ================================ */
@@ -140,9 +146,12 @@ header {
  font-size: 13px;
  padding-left: 15px;
  list-style: none;
- padding-top:20px;
+ padding-top:5px;
 }
 
+.username .name{
+  padding-top:10px;
+}
 
 .header-menus a {
  float: left;

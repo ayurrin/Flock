@@ -15,8 +15,16 @@
             <%= post.user.nickname %>
           </div>
           <%= link_to(post.title, "/#{post.id}") %>
+          <div class="image-post">
+
+            <%= link_to image_tag("/#{post.id}.png"), "/#{post.id}" %>
+
+
+
+          </div>
         </div>
-      </div>
+        </div>
+
       <% end %>
     </div>
 

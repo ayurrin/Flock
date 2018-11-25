@@ -20,13 +20,19 @@ class PostsController < ApplicationController
     @user=@post.user
   end
   def create2
-    @post = Post.new(content: params[:content], title: params[:title],user_id: @current_user.id)
 
-    if @post.save
-      flash[:notice]="投稿を作成しました"
-      redirect_to("/posts")
-    else
-      render("posts/create")
+    @post = Post.new(content: params[:content], title: params[:title],user_id: @current_user.id)
+    @post.save
+    @image=Post.new
+    if @image.generater(params[:content], params[:title], @post.id)
+      @post.image="public/#{@post.id}.png"
+
+      if @post.save
+        flash[:notice]="投稿を作成しました"
+        redirect_to("/posts")
+      else
+        render("posts/create")
+      end
     end
   end
   def destroy
